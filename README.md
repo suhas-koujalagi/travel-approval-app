@@ -1,18 +1,51 @@
-# Salesforce DX Project: Next Steps
+# Travel Approval App
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Overview
 
-## How Do You Plan to Deploy Your Changes?
+The Travel Approval App is a Salesforce Lightning application used to manage employee travel requests and approvals.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Users can submit travel requests, add related expense items, and route requests for approval based on travel conditions. The system enforces required validations, maintains structured approval handling, and provides visibility through reporting components.
 
-## Configure Your Salesforce DX Project
+---
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## System Structure
 
-## Read All About It
+The application is centered around the **Travel Approval** record, which manages the lifecycle of each request from submission to final decision.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Each travel record:
+
+- Captures trip details such as dates, department, destination, and total expenses  
+- Maintains related expense entries  
+- Tracks approval status and approval history  
+- Displays a visual status indicator on the page layout  
+- Supports collaboration through Chatter  
+
+Travel requests are associated with departments and can contain multiple related expense items, preserving structured data relationships within the system.
+
+---
+
+## Automation & Approval Handling
+
+The system enforces controlled behavior across the travel request lifecycle.
+
+- Trip dates are validated to ensure proper scheduling.  
+- Requests require expense data before submission.  
+- Travel classification determines approval routing.  
+- Requests are assigned to the appropriate reviewer based on travel type.  
+- Approval decisions update record status and can be completed directly within the system or via email response.  
+
+This ensures each request follows a consistent and auditable review process.
+
+---
+
+## Reporting & Dashboard
+
+The application includes reports and a dashboard that provide visibility into travel requests and their approval status.
+
+Reports support viewing travel activity by department and by month. The dashboard consolidates this information into visual components for monitoring submission volume and approval outcomes.
+
+---
+
+## Development & Customization Scope
+
+The current implementation establishes the functional foundation of the Travel Approval App. The system is structured to support further enhancement through development-level customization while maintaining the existing workflow and data model.
