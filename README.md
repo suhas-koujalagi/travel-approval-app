@@ -6,8 +6,6 @@ The Travel Approval App is a Salesforce Lightning application used to manage emp
 
 Users can submit travel requests, add related expense items, and route requests for approval based on travel conditions. The system enforces required validations, maintains structured approval handling, and provides visibility through reporting components.
 
----
-
 ## System Structure
 
 The application is centered around the **Travel Approval** record, which manages the lifecycle of each request from submission to final decision.
@@ -22,8 +20,6 @@ Each travel record:
 
 Travel requests are associated with departments and can contain multiple related expense items, preserving structured data relationships within the system.
 
----
-
 ## Automation & Approval Handling
 
 The system enforces controlled behavior across the travel request lifecycle.
@@ -36,15 +32,11 @@ The system enforces controlled behavior across the travel request lifecycle.
 
 This ensures each request follows a consistent and auditable review process.
 
----
-
 ## Reporting & Dashboard
 
 The application includes reports and a dashboard that provide visibility into travel requests and their approval status.
 
 Reports support viewing travel activity by department and by month. The dashboard consolidates this information into visual components for monitoring submission volume and approval outcomes.
-
----
 
 ## Development & Customization Scope
 
